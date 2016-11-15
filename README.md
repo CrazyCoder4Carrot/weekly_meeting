@@ -1,4 +1,4 @@
-# Self Introduction{#weekly-meeting}
+# Self Introduction {#weekly-meeting}
 
 Hao Wen:
 
@@ -10,22 +10,21 @@ Hao Wen:
 
 **Interested topic:** Web Development, NoSQL, Framework.
 
-Yixin Chi:   
+Yixin Chi:
 
 Hongqiao Li:
 
-
 Zheng Yang:
 
-**Prefer Language**: C/C++(150K LOC), Python(5K LOC), JavaScript(15K LOC)
+**Prefer Language**: C\/C++\(150K LOC\), Python\(5K LOC\), JavaScript\(15K LOC\)
 
-**Familiar Topic**: Algorithm and data structure, Django, Linux(Ubuntu &amp; CentOS), Tornado
+**Familiar Topic**: Algorithm and data structure, Django, Linux\(Ubuntu & CentOS\), Tornado
 
 **Interested Topic**: Algorithm and Data structure, Web full-stack, infrastructure, Deep reinforcement learning
 
 Jiajun Wang:
 
-**Main Coding Language**: Java, C#
+**Main Coding Language**: Java, C\#
 
 **Others Language**:Javascript,
 
@@ -41,14 +40,17 @@ Yecheng Tan:
 
 **Interested topic:** strings, dp, scalability, math problem.
 
-Pei Zhong: Computer Network(暂定）
+Pei Zhong: Computer Network\(暂定）
 
 Zhenabng Liu:
 
-**Main coding language**: Python, C, C#
+**Main coding language**: Python, C, C\#
 
 **Other language**: C++, JavaScript
 
 **Familiar topic:** Operating System, Parallel and Distributed System, Cloud Computing, Computer Architecture
 
-**Interested topic:** dp, dfs, bfs, security
+**Interested topic:** dp, dfs, bfs, computer security
+
+
+
