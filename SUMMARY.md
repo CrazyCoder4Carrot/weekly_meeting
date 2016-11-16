@@ -1,5 +1,5 @@
 # Summary
 
 * [Main](README.md)
-* [Members](self_introduction.md)
+* [Members](members.md)
 
