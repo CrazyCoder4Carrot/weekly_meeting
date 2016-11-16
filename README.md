@@ -1,55 +1,8 @@
-# Self Introduction {#weekly-meeting}
+# Mafia
 
-Hao Wen:
+This book focuses on recording the weekly discussion for Mafia. We pay attention to talk about the interview questions and technique topics people are interested in. The coding problems are usually from [leetcode](leetcode.com/problemset/algorithms/) and high-frequency algorithms during the interviews. 
 
-**Main Coding Language**: Java, Python, MATLAB
 
-**Others Language**:C, C++, R, Swift, Scala, Erlang
-
-**Familiar topic**: Algorithms Design and Optimization, Math, SQL, Mobile Development
-
-**Interested topic:** Web Development, NoSQL, Framework.
-
-Yixin Chi:
-
-Hongqiao Li:
-
-Zheng Yang:
-
-**Prefer Language**: C\/C++\(150K LOC\), Python\(5K LOC\), JavaScript\(15K LOC\)
-
-**Familiar Topic**: Algorithm and data structure, Django, Linux\(Ubuntu & CentOS\), Tornado
-
-**Interested Topic**: Algorithm and Data structure, Web full-stack, infrastructure, Deep reinforcement learning
-
-Jiajun Wang:
-
-**Main Coding Language**: Java, C\#
-
-**Others Language**:Javascript,
-
-**Familiar topic**: Array, SQL, AngularJS, NodeJs, MongoDB, Express.JS, JSON, Restful framework.
-
-Yecheng Tan:
-
-**Main Coding Language**: Python, C++, sometimes Java.
-
-**Others Language**:Javascript, shell, C,markdown
-
-**Familiar topic**: open source develop, general language programming, linked list, recursion, backtracking, dfs, bfs, topological travel, etc.
-
-**Interested topic:** strings, dp, scalability, math problem.
-
-Pei Zhong: Computer Network\(暂定）
-
-Zhenabng Liu:
-
-**Main coding language**: Python, C, C\#
-
-**Other language**: C++, JavaScript
-
-**Familiar topic:** Operating System, Parallel and Distributed System, Cloud Computing, Computer Architecture
-
-**Interested topic:** dp, dfs, bfs, computer security
+If you are interested in knowing more about any of the members, please click [here](members.md).
 
 
