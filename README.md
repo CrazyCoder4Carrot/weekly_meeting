@@ -1,4 +1,4 @@
-# Self Introduction {#weekly-meeting}
+# Self Introduction
 
 Hao Wen:
 
