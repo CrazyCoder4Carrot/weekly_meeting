@@ -54,3 +54,5 @@ Computer Network\(暂定）
 
 **Interested topic:** dp, dfs, bfs, computer security
 
+ [Linkedin](www.linkedin.com/in/zhenbang) [GitHub](https://github.com/CrazyCoder4Carrot)
+
