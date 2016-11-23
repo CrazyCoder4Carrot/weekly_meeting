@@ -1,4 +1,7 @@
 {
+    "plugins": ["share"]
+}
+{
   "pluginsConfig": {
         "sharing": {
             "facebook": true,
