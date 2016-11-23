@@ -1,7 +1,5 @@
 {
-    "plugins": ["share"]
-}
-{
+    "plugins": ["share"],
     "pluginsConfig": {
         "share": {
             "reddit": {
@@ -9,4 +7,5 @@
             }
         }
     }
+
 }
