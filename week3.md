@@ -165,6 +165,10 @@ The operations between two bit vector could represent the operation between two 
     ~01010101 = 10101010 represents {1, 3, 5, 7}
 
 ##Problems{#problems}
+
+
+###[Leetcode 78.Subsets](https://leetcode.com/problems/subsets/)
+
 ###[Leetcode 136. Single Number](https://leetcode.com/problems/single-number/)
 Given an array of integers, every element appears twice except for one. Find that single one.
 
@@ -176,11 +180,13 @@ for i in nums:
 ret ^= i
 return ret
 
-###[Leetcode 78.Subsets](https://leetcode.com/problems/subsets/)
+```
+
+
 
 ###[leetcode 137. Single Number II](https://leetcode.com/problems/single-number-ii/)
 
-```
+
 
 ###[Leetcode 190.Reverse Bits](https://leetcode.com/problems/reverse-bits/)
 
