@@ -217,7 +217,27 @@ class Solution(object):
 
 
 ###[leetcode 137. Single Number II](https://leetcode.com/problems/single-number-ii/)
-
+This problem co
+```python
+class Solution(object):
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        res = 0
+        for i in range(32):
+            count = 0
+            for num in nums:
+                if num & (1 << i):
+                    count += 1
+            rem = count % 3
+            if rem and i == 31:
+                res -= 1<<i
+            else:
+                res |= rem * (1<<i)
+        return res
+```
 
 
 ###[Leetcode 190.Reverse Bits](https://leetcode.com/problems/reverse-bits/)
