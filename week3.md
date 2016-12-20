@@ -175,9 +175,7 @@ def singleNumber(self, nums):
 
 We can use w bit vector presents subset of {0,1,2....w-1}.
 
-$$
 
-a\_j = 1 if j
+{% math %}a\_j{% endblock %} = 1 if j
 
-$$
 
