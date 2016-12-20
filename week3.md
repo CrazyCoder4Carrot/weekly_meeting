@@ -175,9 +175,11 @@ def singleNumber(self, nums):
 
 We can use w bit vector presents subset of {0, 1, 2 .... w-1}.
 
+
 $$
 a\_j = 1 \space if \space j\in A
 $$
+
 
 Assume the original set is {0, 1, 2, 3, 4, 5, 6, 7}.
 
@@ -189,9 +191,7 @@ Assume the original set is {0, 1, 2, 3, 4, 5, 6, 7}.
 
 7**6**5**4**3**2**1**0**
 
+The operations between two bit vector could represent the operation between two sets.
 
-The operation in ## between two bit vector could represent the operation between two sets.
-
-'&'(and) operation
-
+'&'\(and\) operation
 
