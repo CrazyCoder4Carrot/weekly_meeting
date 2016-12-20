@@ -176,7 +176,7 @@ def singleNumber(self, nums):
 
 [1]:http://csapp.cs.cmu.edu/
 
-<cite>[15-213/18-213/15-513: Intro to Computer Systems, Fall 2016][1]</cite>
+<cite>[15-513: Intro to Computer Systems][1]</cite>
 
 [1]:http://www.cs.cmu.edu/~213/schedule.html
 
@@ -222,7 +222,5 @@ The operations between two bit vector could represent the operation between two 
 
     ~01010101 = 10101010 represents {1, 3, 5, 7}
 
-<cite>[Computer Systems: A Programmer's Perspective][1]</cite>
 
-[1]:http://csapp.cs.cmu.edu/
 
