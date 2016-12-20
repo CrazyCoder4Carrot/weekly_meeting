@@ -193,5 +193,15 @@ Assume the original set is {0, 1, 2, 3, 4, 5, 6, 7}.
 
 The operations between two bit vector could represent the operation between two sets.
 
-'&'\(and\) operation
+
+
+* ### '&'\(and\) operation represents Intersection
+
+01101001 & 01010101 = 01000001 represents {0, 6}
+
+7**65**4**3**21**0**  7**6**5**4**3**2**1**0**
+
+
+
+
 
