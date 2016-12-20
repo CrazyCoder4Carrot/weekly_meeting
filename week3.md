@@ -195,11 +195,23 @@ The operations between two bit vector could represent the operation between two 
 
 
 
-* ### '&'\(and\) operation represents Intersection
+* ### '&' \(AND\) operation represents Intersection
 
-01101001 & 01010101 = 01000001 represents {0, 6}
+    01101001 & 01010101 = 01000001 represents {0, 6}
+* ### '|' (OR) operation represents Union
 
-7**65**4**3**21**0**     7**6**5**4**3**2**1**0**
+    01101001 | 01010101 = 01111101 represents {0, 2, 3, 4, 5, 6}
+    
+* ### '^' (XOR) operation represents Symmetric difference
+
+    01101001 ^ 01010101 = 00111100 represents {2, 3, 4, 5}
+
+* ### '~' (NOT) operation represents complement
+    ~01101001 = 10010110 represents {1, 2, 4, 7}
+
+    ~01010101 = 10101010 represents {1, 3, 5, 7}
+
+
 
 
 
