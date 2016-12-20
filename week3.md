@@ -10,7 +10,7 @@ This week Pei  presented **bit mamnipulation**.
 * ['|' operator](#oropt)
 * ['^' operator](#xoropt)
 * [Representing & Manipulating Sets](#represent)
-* [Problems](#problem)
+* [Problems](#problems)
 
 **[Reference](#ref)**
 
@@ -78,14 +78,10 @@ def isPowerOfTwo(num):
 ```
 
 ## '\|' operator {#oropt}
-```
-1 | 1 = 1
-
-1 | 0 = 1
-
-0 | 1 = 1
-
-0 | 0 = 0
+set 
+```python
+def setBitN1(x, n):
+    return x|(1<<(n - 1))
 ```
 
 
@@ -162,7 +158,7 @@ The operations between two bit vector could represent the operation between two 
 
     ~01010101 = 10101010 represents {1, 3, 5, 7}
 
-##Problems
+##Problems{#problems}
 
 Given an array of integers, every element appears twice except for one. Find that single one.
 
