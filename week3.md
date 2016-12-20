@@ -169,16 +169,48 @@ The operations between two bit vector could represent the operation between two 
 
 ###[Leetcode 78.Subsets](https://leetcode.com/problems/subsets/)
 
+This problem can be solved by backtracking. Meanwhile, we can also use bit manipulation to solve it. We use bit to present the set.
+Assume there are n element in the set. The count of the subset would be $$2^n$$, which could be represented by $$[ 0\space to \space (2^n-1)]$$. So we just need to iterate the number from 0 to $$(2^n-1)$$ and convert them to set.
+```python
+class Solution(object):
+    def subsets(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        res = []
+
+        def convert2set(val, nums, length):
+            set_list = []
+            for i in range(length):
+                if val & (1 << i):
+                    set_list.append(nums[i])
+            return set_list
+
+        length = len(nums)
+        count = 1 << length
+        for i in range(count):
+            res.append(convert2set(i, nums, length))
+        return res
+```
+
 ###[Leetcode 136. Single Number](https://leetcode.com/problems/single-number/)
-Given an array of integers, every element appears twice except for one. Find that single one.
+The key to solve this problem is the <cite>[The Magic of XOR][3]</cite>
+. 
+
+```
+x^x = 0
+0^x = x
+x^y^x = x^x^y = y
+```
 
 ```python
 class Solution(object):
-def singleNumber(self, nums):
-ret = 0
-for i in nums:
-ret ^= i
-return ret
+    def singleNumber(self, nums):
+        ret = 0
+        for i in nums:
+            ret ^= i
+        return ret
 
 ```
 
@@ -195,12 +227,12 @@ Brute force:
 
 ```python
 def reverseBits(self, n):
-ret = 0
-for i in range(0,32):
-ret <<= 1
-ret |= n & 1
-n >>= 1
-return ret
+    ret = 0
+    for i in range(0,32):
+        ret <<= 1
+        ret |= n & 1
+        n >>= 1
+    return ret
 ```
 
 Another approach:
@@ -310,11 +342,13 @@ Since n can be represented by log\(n\) bits. At worst case, there will be log\(n
 
 [1]:http://csapp.cs.cmu.edu/
 
-<cite>[15-513: Intro to Computer Systems][1]</cite>
+<cite>[15-513: Intro to Computer Systems][2]</cite>
 
-[1]:http://www.cs.cmu.edu/~213/schedule.html
+[2]:http://www.cs.cmu.edu/~213/schedule.html
 
+<cite>[The Magic of XOR][3]</cite>
 
+[3]:https://www.cs.umd.edu/class/sum2003/cmsc311/Notes/BitOp/xor.html
 
 
 
