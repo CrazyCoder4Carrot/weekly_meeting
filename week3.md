@@ -179,3 +179,4 @@ $$
 a\_j = 1 \space if \space j\in A
 $$
 
+Assume the original set is {0, 1, 2, 3, 4, 5, 6, 7}
