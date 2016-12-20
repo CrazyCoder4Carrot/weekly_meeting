@@ -78,6 +78,7 @@ def isPowerOfTwo(num):
 ```
 
 ## '\|' operator {#oropt}
+```
 1 | 1 = 1
 
 1 | 0 = 1
@@ -85,6 +86,7 @@ def isPowerOfTwo(num):
 0 | 1 = 1
 
 0 | 0 = 0
+```
 
 
 
