@@ -4,9 +4,18 @@
 
 This week Pei  presented **bit mamnipulation**.
 
+# Content
+
+* ['&' operator](#andopt)
+* ['|' operator](#oropt)
+* ['^' operator](#xoropt)
+* [Representing & Manipulating Sets](#represent)
+
+**[Reference](#ref)**
+
 Bit Manipulation
 
-### '&' operator
+### '&' operator {#andopt}
 
 **Test n-th bit:**
 
@@ -106,7 +115,7 @@ def rangeBitwiseAnd(self, m, n):
 
 Since n can be represented by log\(n\) bits. At worst case, there will be log\(n\) shifts until m == n. So, the time complexity is O\(logn\).
 
-## '\|' operator
+## '\|' operator {#oropt}
 
 **reverse bit**
 
@@ -158,7 +167,7 @@ def reverseBits(self, n):
     return n
 ```
 
-## '^' operator
+## '^' operator{#xoropt}
 
 Given an array of integers, every element appears twice except for one. Find that single one.
 
@@ -171,14 +180,11 @@ def singleNumber(self, nums):
     return ret
 ```
 
-## Representing & Manipulating Sets
-<cite>[Computer Systems: A Programmer's Perspective][1]</cite>
+## Representing & Manipulating Sets{#represent}
 
-[1]:http://csapp.cs.cmu.edu/
+If you want to know more about the detail please refer to the following link:
 
-<cite>[15-513: Intro to Computer Systems][1]</cite>
 
-[1]:http://www.cs.cmu.edu/~213/schedule.html
 
 
 
@@ -221,6 +227,19 @@ The operations between two bit vector could represent the operation between two 
     ~01101001 = 10010110 represents {1, 2, 4, 7}
 
     ~01010101 = 10101010 represents {1, 3, 5, 7}
+
+## Reference{#ref} 
+
+<cite>[Computer Systems: A Programmer's Perspective][1]</cite>
+
+[1]:http://csapp.cs.cmu.edu/
+
+<cite>[15-513: Intro to Computer Systems][1]</cite>
+
+[1]:http://www.cs.cmu.edu/~213/schedule.html
+
+
+
 
 
 
