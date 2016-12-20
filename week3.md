@@ -212,7 +212,7 @@ The operations between two bit vector could represent the operation between two 
     ~01010101 = 10101010 represents {1, 3, 5, 7}
 
 
-
+{{ "TLW" | cite }}
 
 
 
