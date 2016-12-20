@@ -10,6 +10,7 @@ This week Pei  presented **bit mamnipulation**.
 * ['|' operator](#oropt)
 * ['^' operator](#xoropt)
 * [Representing & Manipulating Sets](#represent)
+* [Problems](#problem)
 
 **[Reference](#ref)**
 
@@ -37,7 +38,7 @@ n & (n - 1)
 #    & = XXXXX000
 ```
 
-Extract right most '1':
+**Extract right most '1':**
 
 ```python
 n & ~(n - 1) # or n & -x
@@ -68,9 +69,130 @@ def isPowerOfTwo(num):
     return num > 0 and not num & num - 1
 ```
 
-## & Problem
+## '\|' operator {#oropt}
 
-### Bitwise AND of Numbers Range
+
+
+## '^' operator{#xoropt}
+
+
+
+## Representing & Manipulating Sets{#represent}
+
+
+
+
+We can use w bit vector presents subset of {0, 1, 2 .... w-1}.
+
+
+$$
+a\_j = 1 \space if \space j\in A
+$$
+
+
+Assume the original set is {0, 1, 2, 3, 4, 5, 6, 7}.
+
+01101001 represent the set {0, 3, 5, 6}
+
+7**65**4**3**21**0**
+
+01010101 reprenset the set {0, 2, 4, 6}
+
+7**6**5**4**3**2**1**0**
+
+The operations between two bit vector could represent the operation between two sets.
+
+
+
+* ### '&' \(AND\) operation represents Intersection
+
+    01101001 & 01010101 = 01000001 represents {0, 6}
+* ### '|' (OR) operation represents Union
+
+    01101001 | 01010101 = 01111101 represents {0, 2, 3, 4, 5, 6}
+    
+* ### '^' (XOR) operation represents Symmetric difference
+
+    01101001 ^ 01010101 = 00111100 represents {2, 3, 4, 5}
+
+* ### '~' (NOT) operation represents complement
+    ~01101001 = 10010110 represents {1, 2, 4, 7}
+
+    ~01010101 = 10101010 represents {1, 3, 5, 7}
+
+##Problem 
+
+Given an array of integers, every element appears twice except for one. Find that single one.
+
+```python
+class Solution(object):
+def singleNumber(self, nums):
+    ret = 0
+    for i in nums:
+        ret ^= i
+    return ret
+```
+
+###[Leetcode 78.Subsets](https://leetcode.com/problems/subsets/)
+
+###[leetcode 137. Single Number II](https://leetcode.com/problems/single-number-ii/)
+
+
+###[Leetcode 190.Reverse Bits](https://leetcode.com/problems/reverse-bits/)
+
+Given an integer, reverse its bits.
+Brute force:
+
+```python
+def reverseBits(self, n):
+ret = 0
+for i in range(0,32):
+ret <<= 1
+ret |= n & 1
+n >>= 1
+return ret
+```
+
+Another approach:
+
+For example: ABCDEFGH
+
+```
+ABCDEFGH >> 4 = 0000ABCD
+ABCDEFGH << 4 = EFGH0000
+0000ABCD | EFGH0000 = EFGHABCD
+
+EFGHABCD & 00110011 = 00GH00CD
+EFGHABCD & 11001100 = EF00AB00
+00GH00CD << 2 = GH00CD00
+EF00AB00 >> 2 = 00EF00AB
+GH00CD00 & 00EF00AB = GHEFCDAB
+
+GHEFCDAB & 01010101 = 0H0F0D0B
+GHEFCDAB & 10101010 = G0E0C0A0
+0H0F0D0B << 1 = H0F0D0B0
+G0E0C0A0 >> 1 = 0G0E0C0A
+H0F0D0B0 | 0G0E0C0A = HGFEDCBA
+Reversed!
+```
+
+Code:
+
+```python
+def reverseBits(self, n):
+n = (n >> 16) | (n << 16)
+n = ((n & 0xFF00FF00) >> 8) | ((n & 0x00FF00FF) << 8)
+n = ((n & 0xF0F0F0F0) >> 4) | ((n & 0x0F0F0F0F) << 4)
+n = ((n & 0xCCCCCCCC) >> 2) | ((n & 0x33333333) << 2)
+n = ((n & 0xAAAAAAAA) >> 1) | ((n & 0x55555555) << 1)
+return n
+```
+
+
+
+
+
+###[Leetcode 201. Bitwise AND of Numbers Range](https://leetcode.com/problems/bitwise-and-of-numbers-range/)
 
 Given a range \[m, n\] where 0 &lt;= m &lt;= n &lt;= 2147483647, return the bitwise AND of all numbers in this range, inclusive.
 
@@ -115,113 +237,26 @@ def rangeBitwiseAnd(self, m, n):
 
 Since n can be represented by log\(n\) bits. At worst case, there will be log\(n\) shifts until m == n. So, the time complexity is O\(logn\).
 
-## '\|' operator {#oropt}
 
-**reverse bit**
 
-Given an integer, reverse its bits.  
-Brute force:
 
-```python
-def reverseBits(self, n):
-    ret = 0
-    for i in range(0,32):
-        ret <<= 1
-        ret |= n & 1
-        n >>= 1
-    return ret
-```
+###leetcode 260 
 
-Another approach:
-
-For example: ABCDEFGH
-
-```
-ABCDEFGH >> 4 = 0000ABCD
- ABCDEFGH << 4 = EFGH0000
- 0000ABCD | EFGH0000 = EFGHABCD
-
- EFGHABCD & 00110011 = 00GH00CD
- EFGHABCD & 11001100 = EF00AB00
- 00GH00CD << 2 = GH00CD00
- EF00AB00 >> 2 = 00EF00AB
- GH00CD00 & 00EF00AB = GHEFCDAB
-
- GHEFCDAB & 01010101 = 0H0F0D0B
- GHEFCDAB & 10101010 = G0E0C0A0
- 0H0F0D0B << 1 = H0F0D0B0
- G0E0C0A0 >> 1 = 0G0E0C0A
- H0F0D0B0 | 0G0E0C0A = HGFEDCBA
- Reversed!
-```
-
-Code:
-
-```python
-def reverseBits(self, n):
-    n = (n >> 16) | (n << 16)
-    n = ((n & 0xFF00FF00) >> 8) | ((n & 0x00FF00FF) << 8)
-    n = ((n & 0xF0F0F0F0) >> 4) | ((n & 0x0F0F0F0F) << 4)
-    n = ((n & 0xCCCCCCCC) >> 2) | ((n & 0x33333333) << 2)
-    n = ((n & 0xAAAAAAAA) >> 1) | ((n & 0x55555555) << 1)
-    return n
-```
-
-## '^' operator{#xoropt}
-
-Given an array of integers, every element appears twice except for one. Find that single one.
-
-```python
-class Solution(object):
-def singleNumber(self, nums):
-    ret = 0
-    for i in nums:
-        ret ^= i
-    return ret
-```
-
-## Representing & Manipulating Sets{#represent}
+###[leetcode 318. Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/)
 
 
 
 
-We can use w bit vector presents subset of {0, 1, 2 .... w-1}.
 
-
-$$
-a\_j = 1 \space if \space j\in A
-$$
-
-
-Assume the original set is {0, 1, 2, 3, 4, 5, 6, 7}.
-
-01101001 represent the set {0, 3, 5, 6}
-
-7**65**4**3**21**0**
-
-01010101 reprenset the set {0, 2, 4, 6}
-
-7**6**5**4**3**2**1**0**
-
-The operations between two bit vector could represent the operation between two sets.
+###[Leetcode 320. Generalized Abbreviation](https://leetcode.com/problems/generalized-abbreviation/)
 
 
 
-* ### '&' \(AND\) operation represents Intersection
 
-    01101001 & 01010101 = 01000001 represents {0, 6}
-* ### '|' (OR) operation represents Union
 
-    01101001 | 01010101 = 01111101 represents {0, 2, 3, 4, 5, 6}
-    
-* ### '^' (XOR) operation represents Symmetric difference
 
-    01101001 ^ 01010101 = 00111100 represents {2, 3, 4, 5}
+###leetcode 260 
 
-* ### '~' (NOT) operation represents complement
-    ~01101001 = 10010110 represents {1, 2, 4, 7}
-
-    ~01010101 = 10101010 represents {1, 3, 5, 7}
 
 ## Reference{#ref} 
 
