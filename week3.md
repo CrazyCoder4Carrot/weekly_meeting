@@ -29,9 +29,11 @@ This week Pei  presented **bit mamnipulation**.
 **Test n-th bit:**
 
 ```python
-if num & 1 << n: #if n-th bit is 1
+if num & 1 << n: 
+    #if n-th bit is 1
     doSomething()
-else: #if n-th bit is 0
+else: 
+    #if n-th bit is 0
     doSomething()
 ```
 
@@ -78,10 +80,21 @@ def isPowerOfTwo(num):
 ```
 
 ## '\|' operator {#oropt}
-set 
+set n-th bit to 1
 ```python
 def setBitN1(x, n):
-    return x|(1<<(n - 1))
+    return x | (1<<(n - 1))
+```
+
+set consecutive k bits to 1
+```python
+def setNbitsto1(x, k):
+    return x | ((1<<k)-1)
+```
+
+set consecuitive 0 to 1
+```
+x|(x-1)
 ```
 
 
