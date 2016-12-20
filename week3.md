@@ -49,7 +49,7 @@ n & ~(n - 1) # or n & -x
 #    &    = 00000100
 ```
 
-**Some Example**:
+**Examples**:
 
 Count number of 1
 
