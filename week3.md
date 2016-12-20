@@ -217,7 +217,26 @@ class Solution(object):
 
 
 ###[leetcode 137. Single Number II](https://leetcode.com/problems/single-number-ii/)
-This problem co
+This problem can be solve by math.
+```python
+class Solution(object):
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        if [] or len(nums) == 1:
+            return sum(nums)
+        return (3 * sum(set(nums)) - sum(nums))/2
+```
+This problem also can be solved by bit manipulation. We use 32 bit binary number to present the target. Fro example the input list is [2, 5, 5, 5]. At first, we convert them to binary format.
+```
+0010
+0101
+0101
+0101
+```
+So, we check every bit(0 to 32) of every num in the list. If the count of that bit mod 3 is 1, which means this bit also in the target number. If the mod result is 0, which means this bit not in the target number. **But, using th python, for the negative number we need to check the sign bit by ourselves.**
 ```python
 class Solution(object):
     def singleNumber(self, nums):
