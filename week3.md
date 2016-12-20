@@ -14,9 +14,17 @@ This week Pei  presented **bit mamnipulation**.
 
 **[Reference](#ref)**
 
-Bit Manipulation
+#Bit Manipulation
 
 ### '&' operator {#andopt}
+
+1 & 1 = 1
+
+1 & 0 = 0
+
+0 & 1 = 0
+
+0 & 0 = 0
 
 **Test n-th bit:**
 
@@ -70,6 +78,13 @@ def isPowerOfTwo(num):
 ```
 
 ## '\|' operator {#oropt}
+1 | 1 = 1
+
+1 | 0 = 1
+
+0 | 1 = 1
+
+0 | 0 = 0
 
 
 
@@ -81,6 +96,18 @@ def isPowerOfTwo(num):
 0 ^ 1 = 1
 
 0 ^ 0 = 1
+
+***Example***
+
+```python
+//swap two variables
+def swap(a, b):
+    a = a^b
+    b = a^b
+    a = a^b
+    return a, b
+
+```
 
 
 
