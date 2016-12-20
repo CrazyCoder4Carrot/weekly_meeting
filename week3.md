@@ -139,6 +139,17 @@ def reverseBits(self, n):
     n = ((n & 0xAAAAAAAA) >> 1) | ((n & 0x55555555) << 1)
     return n
 ```
+##'^' operator
+Given an array of integers, every element appears twice except for one. Find that single one.
+```python
+class Solution(object):
+def singleNumber(self, nums):
+    ret = 0
+    for i in nums:
+        ret ^= i
+    return ret
+```
+
 
 
 
