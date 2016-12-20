@@ -199,7 +199,7 @@ The operations between two bit vector could represent the operation between two 
 
 01101001 & 01010101 = 01000001 represents {0, 6}
 
-7**65**4**3**21**0**  7**6**5**4**3**2**1**0**
+7**65**4**3**21**0**     7**6**5**4**3**2**1**0**
 
 
 
