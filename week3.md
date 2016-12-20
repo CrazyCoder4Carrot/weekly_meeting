@@ -1,6 +1,6 @@
 # Mafia Week 3
 
-2017-12-18
+Date Time: 2017-12-18
 
 This week Pei  presented **bit mamnipulation**.
 
@@ -89,15 +89,21 @@ def isPowerOfTwo(num):
 
 
 ## '^' operator{#xoropt}
-1 ^ 1 = 0
+```
+x ^ 0 = x
 
-1 ^ 0 = 1
+x ^ x = 0
 
-0 ^ 1 = 1
+x ^ 0xF...F = ~x     //depends on the length of bits
 
-0 ^ 0 = 1
+x ^ (-x) = 0xF...F  //depends on the length of bits
 
-***Example***
+a ^ b = c => a ^ c = b, b ^ c = a // swap
+
+a ^ b ^ c = a ^ (b ^ c) = (a ^ b) ^ c // associative
+```
+
+**Example**:
 
 ```python
 //swap two variables
