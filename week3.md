@@ -179,4 +179,19 @@ $$
 a\_j = 1 \space if \space j\in A
 $$
 
-Assume the original set is {0, 1, 2, 3, 4, 5, 6, 7}
+Assume the original set is {0, 1, 2, 3, 4, 5, 6, 7}.
+
+01101001 represent the set {0, 3, 5, 6}
+
+7**65**4**3**21**0**
+
+01010101 reprenset the set {0, 2, 4, 6}
+
+7**6**5**4**3**2**1**0**
+
+
+The operation in ## between two bit vector could represent the operation between two sets.
+
+'&'(and) operation
+
+
