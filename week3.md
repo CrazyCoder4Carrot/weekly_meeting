@@ -120,7 +120,7 @@ The operations between two bit vector could represent the operation between two 
 
     ~01010101 = 10101010 represents {1, 3, 5, 7}
 
-##Problem 
+##Problems
 
 Given an array of integers, every element appears twice except for one. Find that single one.
 
@@ -240,7 +240,7 @@ Since n can be represented by log\(n\) bits. At worst case, there will be log\(n
 
 
 
-###leetcode 260 
+###[leetcode 260. Single Number III](https://leetcode.com/problems/single-number-iii/) 
 
 ###[leetcode 318. Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/)
 
@@ -252,10 +252,6 @@ Since n can be represented by log\(n\) bits. At worst case, there will be log\(n
 
 
 
-
-
-
-###leetcode 260 
 
 
 ## Reference{#ref} 
