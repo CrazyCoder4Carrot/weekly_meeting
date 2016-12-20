@@ -182,11 +182,6 @@ def singleNumber(self, nums):
 
 ## Representing & Manipulating Sets{#represent}
 
-If you want to know more about the detail please refer to the following link:
-
-
-
-
 
 
 
