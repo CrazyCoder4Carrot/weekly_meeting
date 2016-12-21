@@ -362,15 +362,95 @@ Since n can be represented by log\(n\) bits. At worst case, there will be log\(n
 
 
 ###[leetcode 260. Single Number III](https://leetcode.com/problems/single-number-iii/) 
-
+This problem has two targets. So we need to divide the list into to part. The first part contains one target, the other part contains the other target. Assume the target is [3, 5]:
+```
+0011
+0101
+```
+When we use the xor operation on all nums in the list and get the result k. We can get the right most one from k. We use this bit as the mask to divide the list into two parts. Each part has one target. 
+```python
+class Solution(object):
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        a = b = ret = 0
+        for num in nums:
+            ret ^= num
+        mask = ret & ~(ret-1)
+        for num in nums:
+            if num & mask:
+                a ^= num
+            else:
+                b ^= num
+        return [a,b]
+        
+```
 ###[leetcode 318. Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/)
-
-
+We can use 26 bits to represent each word in the word list. Use **'and'** operation to check wheather two different words has intersection.
+```python
+class Solution(object):
+    def maxProduct(self, words):
+        """
+        :type words: List[str]
+        :rtype: int
+        """
+        def convert2num(string):
+            num = 0
+            for char in string:
+                num |= 1<<(ord(char)-ord('a'))
+            return num
+        temp = []
+        for word in words:
+            temp.append(convert2num(word))
+        res = 0
+        for i in range(len(temp)):
+            for j in range(i+1, len(temp)):
+                if temp[i] & temp[j] == 0:
+                    res = max(res, len(words[i]) * len(words[j]))
+        return res
+```
 
 
 
 ###[Leetcode 320. Generalized Abbreviation](https://leetcode.com/problems/generalized-abbreviation/)
+This problem we also need to use n bits to represent the different combinations of the word. **But, we also need to count consecutive '0' in each combination.**
+```python
+class Solution(object):
+    def generateAbbreviations(self, word):
+        """
+        :type word: str
+        :rtype: List[str]
+        """
+        def convert2abbr(num, count, word):
+            abbr = ""
+            zero, i = 0, 0
+            flag = False
+            while i < count:
+                if not num & (1 << i):
+                    if flag:
+                        zero += 1
+                    else:
+                        flag = True
+                        zero = 1
+                else:
+                    if flag:
+                        flag = False
+                        abbr = abbr + str(zero)
+                    abbr = abbr + word[i]
+                i += 1
+            if flag:
+                abbr += str(zero)
+            return abbr
 
+        res = []
+        length = len(word)
+        count = 1 << length
+        for i in range(count):
+            res.append(convert2abbr(i, length, word))
+        return res
+```
 
 
 
